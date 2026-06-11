@@ -1584,6 +1584,12 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
   letter-spacing: 0.04em;
 }
 
+@media (max-width: 300px) {
+.theme-toggle {
+  display: none;
+}
+}
+
 /* ══════════════════════════════════════════
    15. TABLET — min-width: 768px
 ══════════════════════════════════════════ */
@@ -1606,6 +1612,8 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
   .hero-content  { text-align: left; flex: 1; }
   .hero-ctas     { justify-content: flex-start; }
   .hero-visual   { flex: 1; max-width: 380px; }
+
+  
 
   .features-grid { grid-template-columns: repeat(2, 1fr); }
 
