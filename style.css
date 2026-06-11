@@ -1584,8 +1584,12 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
   letter-spacing: 0.04em;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 350px) {
 .theme-toggle {
+  display: none;
+}
+
+.theme-icon {
   display: none;
 }
 }
