@@ -1,10 +1,9 @@
-/* ==========================================================================
-   FINLY SECURE STANDALONE CHECKOUT CONTROLLER
-   · Handles responsive input masking (Card Spaces & Expiry Slashes)
-   · Real-time card type indicator engine (Visa, Mastercard, Verve)
-   · Simulated secure banking multi-phase transaction logic
-   · Application router redirection drop
-   ========================================================================== */
+/* SECURE STANDALONE CHECKOUT CONTROLLER
+ · Handles responsive input masking (Card Spaces & Expiry Slashes)
+ · Real-time card type indicator engine (Visa, Mastercard, Verve)
+ · Simulated secure banking multi-phase transaction logic
+ · Application router redirection drop
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
   const statusScreen = document.getElementById('payment-status-screen');

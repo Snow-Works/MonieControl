@@ -1,15 +1,12 @@
-/* ============================================
-   FINLY — script.js
-   DecodeLabs Project 1
-   Features:
-   · Dark / Light mode toggle (desktop + mobile)
-   · Mobile slide-in menu + backdrop
-   · Navbar scroll shadow
-   · Billing period toggle (monthly / annual)
-   · Close menu on nav link click
-   ============================================ */
+/* Features:
+·Dark / Light mode toggle (desktop + mobile)
+.Mobile slide-in menu + backdrop
+·Navbar scroll shadow
+· Billing period toggle (monthly / annual)
+] Close menu on nav link click
+   */
 
-/* ── 1. THEME TOGGLE ── */
+/*  THEME TOGGLE  */
 const html            = document.documentElement;
 const themeToggleBtn  = document.getElementById('theme-toggle-desktop');
 const mobileLightBtn  = document.getElementById('mobile-light-btn');
@@ -17,7 +14,7 @@ const mobileDarkBtn   = document.getElementById('mobile-dark-btn');
 
 const THEME_KEY = 'finly-theme';
 
-// Initialise from localStorage or default to light
+// Initialize from localStorage or default to light
 function initTheme() {
   const saved = localStorage.getItem(THEME_KEY) || 'light';
   applyTheme(saved, false);
@@ -61,7 +58,7 @@ mobileDarkBtn?.addEventListener('click',  () => applyTheme('dark'));
 initTheme();
 
 
-/* ── 2. MOBILE MENU ── */
+/*  MOBILE MENU SECTION */
 const hamburger    = document.getElementById('hamburger');
 const mobileMenu   = document.getElementById('mobile-menu');
 const mobileClose  = document.getElementById('mobile-close');
@@ -105,7 +102,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-/* ── 3. NAVBAR SCROLL SHADOW ── */
+/*  3. NAVBAR SCROLL SHADOW  */
 const navbar = document.querySelector('.navbar');
 
 const scrollObserver = new IntersectionObserver(
@@ -120,7 +117,7 @@ const heroSection = document.getElementById('hero');
 if (heroSection) scrollObserver.observe(heroSection);
 
 
-/* ── 4. BILLING TOGGLE ── */
+/* BILLING TOGGLE  */
 const billingBtn     = document.getElementById('billing-toggle');
 const priceAmounts   = document.querySelectorAll('.price-amount');
 const monthlyLabel   = document.getElementById('toggle-monthly');
@@ -147,7 +144,7 @@ billingBtn?.addEventListener('click', () => {
 });
 
 
-/* ── 5. SMOOTH ACTIVE NAV LINK ── */
+/*  SMOOTH ACTIVE NAV LINK  */
 const sections   = document.querySelectorAll('main section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');
 
@@ -169,10 +166,10 @@ function setActiveLink() {
 window.addEventListener('scroll', setActiveLink, { passive: true });
 
 
-/* ── 6. API INTEGRATION (Project 2) ── */
+/*  API INTEGRATION (Project 2) */
 const API_BASE = 'http://localhost:3000/api';
 
-// ── 6a. Load dashboard data from API on page load ──
+// Load dashboard data from API on page load ──
 async function loadDashboardData() {
   try {
     const [budgetRes, txRes] = await Promise.all([
@@ -217,7 +214,7 @@ function updateDashboardStats(summary) {
   if (statVals[1] && saved)  statVals[1].textContent = '$' + saved.toLocaleString();
 }
 
-// ── 6b. Waitlist form — wire "Get Started" CTA ──
+// Wait list form — wire "Get Started" CTA ──
 function initWaitlistForm() {
   // Inject a minimal inline form into the hero CTA area
   const heroCtas = document.querySelector('.hero-ctas');

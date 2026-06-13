@@ -1,9 +1,4 @@
-/* ============================================
-   FINLY — server.js
-   DecodeLabs Project 2 | Backend API
-   Entry point: Express server setup,
-   middleware, route mounting, error handling
-   ============================================ */
+/* Backend API Entry point: Express server setup, middleware, route mounting, error handling  */
 
 const express = require('express');
 const cors    = require('cors');
@@ -18,9 +13,9 @@ const contactRoutes     = require('./routes/contact');
 const app  = express();
 const PORT = process.env.PORT || 3000;
 
-/* ─────────────────────────────────────────
-   MIDDLEWARE
-───────────────────────────────────────── */
+
+
+/* MIDDLEWARE */
 
 // Parse incoming JSON bodies
 app.use(express.json());
@@ -45,11 +40,7 @@ app.use((req, res, next) => {
   next();
 });
 
-/* ─────────────────────────────────────────
-   HEALTH CHECK ENDPOINT
-   GET /api/health
-   Returns: server status + timestamp
-───────────────────────────────────────── */
+/* HEALTH CHECK ENDPOINT, GET /api/health, Returns: server status + timestamp */
 app.get('/api/health', (req, res) => {
   res.status(200).json({
     status:  'ok',
@@ -59,24 +50,17 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-/* ─────────────────────────────────────────
-   ROUTE MOUNTING
-───────────────────────────────────────── */
+/*  ROUTE MOUNTING */
 app.use('/api/budgets',      budgetRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/contact',      contactRoutes);
 
-/* ─────────────────────────────────────────
-   ROOT — serve index.html
-───────────────────────────────────────── */
+/* ROOT — serve index.html */
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-/* ─────────────────────────────────────────
-   404 HANDLER
-   Catches any route that doesn't exist
-───────────────────────────────────────── */
+/* 404 HANDLER {Catches any route that doesn't exist} */
 app.use((req, res) => {
   res.status(404).json({
     status:  'error',
@@ -85,11 +69,7 @@ app.use((req, res) => {
   });
 });
 
-/* ─────────────────────────────────────────
-   GLOBAL ERROR HANDLER
-   Catches any server-side errors passed
-   via next(err)
-───────────────────────────────────────── */
+/* GLOBAL ERROR HANDLER {Catches any server-side errors passed via next(err)}  */
 app.use((err, req, res, next) => {
   console.error(`[ERROR] ${err.message}`);
   res.status(err.status || 500).json({
@@ -99,9 +79,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-/* ─────────────────────────────────────────
-   START SERVER
-───────────────────────────────────────── */
+/* START SERVER */
 app.listen(PORT, () => {
   console.log('');
   console.log('  ◎  FINLY API SERVER');

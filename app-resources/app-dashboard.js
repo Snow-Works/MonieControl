@@ -1,6 +1,5 @@
-/**
- * FINFLOW LIVE DASHBOARD WORKSPACE STATE ENGINE
- * Handles real-time DOM reconciliation and Express REST operations.
+/* THE LIVE DASHBOARD WORKSPACE STATE ENGINE
+Handles real-time DOM reconciliation and Express REST operations.
  */
 
 const ENDPOINT_BASE = 'http://localhost:3000/api';

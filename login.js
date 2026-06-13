@@ -1,6 +1,4 @@
-/* ==========================================================================
-   AUTHENTICATION LOGIC ENGINE WITH PASS-SEE VISIBILITY MATRIX
-   ========================================================================== */
+/* THE AUTHENTICATION LOGIC ENGINE WITH PASS-SEE VISIBILITY MATRIX  */
 
 function switchForm(view) {
   document.getElementById('tab-login').classList.toggle('active', view === 'login');

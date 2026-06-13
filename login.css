@@ -1,6 +1,3 @@
-/* ==========================================================================
-   FINLY AUTHENTICATION SYSTEM — MODERN CLASSY DESIGN
-   ========================================================================== */
 
 :root {
   --mocha:          #A5856E;
@@ -226,9 +223,14 @@ body {
   transform: scale(0.99);
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM DOWN TO 250PX
-   ========================================================================== */
+button a {
+  color:#cec5bf;
+  text-decoration: none;
+
+}
+
+/* 
+   RESPONSIVENESS AND SCREEN SIZES  */
 
 @media (max-width: 480px) {
   body { padding: 1rem; }

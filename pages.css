@@ -245,9 +245,7 @@ body {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   RESILIENT MEDIA QUERY ENGINE (Down to 250px)
-   ========================================================================== */
+/* MEDIA QUERY RESPONSIVENESS */
 
 /* Tablet and Small Desktops breakpoint */
 @media (min-width: 600px) {
