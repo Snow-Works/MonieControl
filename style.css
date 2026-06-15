@@ -1588,20 +1588,6 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
 }
 
 
-/* EXTRA SMALL SCREENS RESPONSIVENESS (200px to 300px) */
-@media (min-width: 200px) and (max-width: 300px) {
-  
-  /* Hide the dark-to-light theme toggle button */
-  .nav-actions .theme-toggle {
-    display: none !important;
-  }
-
-  /* Force the hamburger menu to display and remain active */
-  .hamburger {
-    display: flex !important;
-  }
-}
-
 
 
 
@@ -1707,4 +1693,21 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
 
 [data-theme="dark"] :focus-visible {
   outline-color: var(--gold);
+}
+
+
+
+
+/* EXTRA SMALL SCREENS RESPONSIVENESS (200px to 300px) */
+@media (min-width: 200px) and (max-width: 300px) {
+  
+  /* Hide the dark-to-light theme toggle button */
+  .nav-actions .theme-toggle {
+    display: none !important;
+  }
+
+  /* Force the hamburger menu to display and remain active */
+  .hamburger {
+    display: flex !important;
+  }
 }
