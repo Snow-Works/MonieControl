@@ -1555,18 +1555,26 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
   letter-spacing: 0.04em;
 }
 
+
+
+
+
+
+
+
 /* MOBILE PHONE RESPONSIVENESS — min-width: 768px */
 
 @media (max-width: 400px) {
 .theme-toggle {
-  display: none;
+  display: none !important;
 }
 
 .theme-icon {
-  display: none;
+  display: none !important;
 }
+
 .theme-toggle + .theme-icon {
-  display: none;
+  display: none !important;
   position: fixed;
   bottom: 16px; right: 16px;
   width: 40px; height: 40px;
@@ -1580,8 +1588,32 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
   z-index: 400;
   transition: background var(--t), color var(--t), border-color var(--t);
 } 
-.
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.1rem !important;
+  border-radius: var(--r-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all var(--t);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
+
+}
+
+
+
+
+
+
+
 
 /*  TABLET SCREEN SIZES — min-width: 768px */
 @media (min-width: 768px) {
@@ -1626,6 +1658,17 @@ button   { cursor: pointer; border: none; background: none; font-family: inherit
     justify-content: space-between;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /*  DESKTOP SCREEN — min-width: 1024px */
 @media (min-width: 1024px) {
