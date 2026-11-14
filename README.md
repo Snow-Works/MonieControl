@@ -74,20 +74,7 @@ bash
 git clone https://github.com/<your-username>/MonieControl.git
 cd MonieControl
 
-# Install dependencies
-npm install
 
-# Start the server
-npm start
-
-# Or run with auto-reload during development
-npm run dev
-
-The app will be available at http://localhost:3000.
-
-API Reference
-
-Base URL: http://localhost:3000/api
 
 Health
 Method	Endpoint	Description
